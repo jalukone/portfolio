@@ -1,58 +1,99 @@
 import { useState } from "react"
 import useMediaQuery from "../hooks/useMediaQuery";
+import Burger from "./Burger";
+import LinkAnchor from "./LinkAnchor";
+import Logo from "../assets/logo.png"
 
-
-type LinkProps = {
-  page: string,
+type NavbarProps = {
   selectedPage: string,
   setSelectedPage: Function
 }
 
-type NavbarProp = {
-  selectedPage: string,
-  setSelectedPage: Function
-}
-
-const Link = ({ page, selectedPage, setSelectedPage }: LinkProps) => {
-
-  const lowerCasePage = page.toLowerCase();
-  return (
-    <a
-      className={`${selectedPage === lowerCasePage ? "text-pink-dark" : ""}
-          hover:text-pink-dark transition duration-500`}
-      href={`#${lowerCasePage}`}
-      onClick={() => setSelectedPage(lowerCasePage)}
-    >
-      {page}
-    </a>
-  )
-
-};
-
-const Navbar = ({ selectedPage, setSelectedPage }: NavbarProp) => {
+const Navbar = ({ selectedPage, setSelectedPage }: NavbarProps) => {
 
   const [isMenuToggled, setIsMenuToggled] = useState(false);
 
-  const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
-
+  const isAboveSmallScreens = useMediaQuery("(min-width: 900px)");
 
   return (
     <nav className={`z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <h1 className="font-dmmono text-5xl">JalukOne</h1>
-
-        {/* Desktop */}
+        <img src={Logo} alt="Logo" className="h-[60px]" />
+        {/* D E S K T O P */}
         {isAboveSmallScreens ? (
           <div className="flex justify-between gap-16 font-dmmono text-lg font-semibold">
-            <Link
+            <LinkAnchor
               page="Home"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <LinkAnchor
+              page="Skills"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <LinkAnchor
+              page="Projects"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            {/* <LinkAnchor */}
+            {/*   page="Testimonials" */}
+            {/*   selectedPage={selectedPage} */}
+            {/*   setSelectedPage={setSelectedPage} */}
+            {/* /> */}
+            <LinkAnchor
+              page="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
           </div>
         ) : (
-          <div></div>
+
+          <Burger onClick={() => setIsMenuToggled(!isMenuToggled)} />
+
         )}
+
+        {/* M O B I L E */}
+        {!isAboveSmallScreens && isMenuToggled && (
+          <div className="fixed right-0 bottom-0 h-full bg-dark w-[300px]">
+            {/* C L O S E */}
+            <div className="flex justify-end p-12">
+              <button onClick={() => setIsMenuToggled(!isMenuToggled)}> X </button>
+            </div>
+
+            {/* M E N U   I T E M S */}
+            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-light">
+              <LinkAnchor
+                page="Home"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <LinkAnchor
+                page="Skills"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <LinkAnchor
+                page="Projects"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              {/* <LinkAnchor */}
+              {/*   page="Testimonials" */}
+              {/*   selectedPage={selectedPage} */}
+              {/*   setSelectedPage={setSelectedPage} */}
+              {/* /> */}
+              <LinkAnchor
+                page="Contact"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+            </div>
+          </div>
+        )}
+
+
       </div>
     </nav>
   )
