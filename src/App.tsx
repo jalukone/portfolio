@@ -13,7 +13,7 @@ const App = () => {
   const isDesktop = useMediaQuery("(min-width: 1060px)");
 
   return (
-    <div className="bg-dark">
+    <div className="app bg-dark">
       {/* N A V B A R */}
       <Navbar
         selectedPage={selectedPage}
