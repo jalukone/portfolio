@@ -7,15 +7,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "dark": "#1c292f",
+        "dark": "#130F19",
         "light": "#f4fbfd",
         "gold": "#f59f4e",
-        "pink-dark": "#ff7576"
+        "green-accent": "#31B8AB",
+        "pink-accent": "#FC6767",
+        "magenta-accent": "#EC008C",
+        "purple-accent": "#AF4CAB"
       },
       backgroundImage: (theme) => ({
         "gradient-one":
-          "linear-gradient( 102.4deg,  rgba(253,189,85,1) 7.8%, rgba(249,131,255,1) 100.3% )",
-
+          // "linear-gradient(180.28deg, #FC6767 0.08%, #EC008C 49.99%, #AF4CAB 99.89%)",
+          "linear-gradient(60deg, rgba(252,103,103,1) 8%, rgba(236,0,140,1) 55%, rgba(175,76,171,1) 95%)",
         "gradient-rainblue":
           "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
       }),
@@ -30,8 +33,8 @@ module.exports = {
       ss: "619px",
       sm: "767px",
       mm: "899px",
-      md: "1059px",
-      lg: "1199px",
+      md: "1099px",
+      lg: "1279px",
       xl: "1699px",
     },
   },
