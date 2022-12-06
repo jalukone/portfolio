@@ -19,20 +19,21 @@ const App = () => {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="w-5/6 mx-auto mm:h-full">
-        {isDesktop && (
-          <DotGroup
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-        )}
-        <motion.div
-          onViewportEnter={() => setSelectedPage("home")}
-        >
-          <Landing />
-        </motion.div>
+      <div className="landing">
+        <div className="md:grid place-items-center w-full h-full">
+          {isDesktop && (
+            <DotGroup
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+          )}
+          <motion.div
+            onViewportEnter={() => setSelectedPage("home")}
+          >
+            <Landing setSelectedPage={setSelectedPage} />
+          </motion.div>
+        </div>
       </div>
-
     </div>
   )
 }

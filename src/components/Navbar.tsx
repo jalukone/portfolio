@@ -18,7 +18,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: NavbarProps) => {
   return (
     <nav className={`z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <img src={Logo} alt="Logo" className="h-[60px]" />
+        <img src={Logo} alt="Logo" className="md:h-[60px] h-[45px]" />
         {/* D E S K T O P */}
         {isAboveSmallScreens ? (
           <div className="flex justify-between gap-16 font-dmmono text-lg font-semibold">
