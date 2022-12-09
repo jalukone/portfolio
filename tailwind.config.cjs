@@ -19,8 +19,8 @@ module.exports = {
         "gradient-one":
           // "linear-gradient(180.28deg, #FC6767 0.08%, #EC008C 49.99%, #AF4CAB 99.89%)",
           "linear-gradient(60deg, rgba(252,103,103,1) 8%, rgba(236,0,140,1) 55%, rgba(175,76,171,1) 95%)",
-        "gradient-rainblue":
-          "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
+        "gradient-greenblue":
+          "linear-gradient(255deg, #0093E9 0%, #80D0C7 100%)",
       }),
 
       fontFamily: {
