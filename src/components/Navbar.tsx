@@ -5,23 +5,25 @@ import LinkAnchor from "./LinkAnchor";
 import Logo from "../assets/logo.png"
 
 type NavbarProps = {
+  isTopOfPage: boolean,
   selectedPage: string,
   setSelectedPage: Function
 }
 
-const Navbar = ({ selectedPage, setSelectedPage }: NavbarProps) => {
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: NavbarProps) => {
 
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-
   const isAboveSmallScreens = useMediaQuery("(min-width: 900px)");
+  const navbarBackground = isTopOfPage ? "" : "bg-dark";
+
 
   return (
-    <nav className={`z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <img src={Logo} alt="Logo" className="md:h-[60px] h-[45px]" />
         {/* D E S K T O P */}
         {isAboveSmallScreens ? (
-          <div className="flex justify-between gap-16 font-dmmono text-lg font-semibold">
+          <div className="flex justify-between gap-16 font-dmmono text-lg ">
             <LinkAnchor
               page="Home"
               selectedPage={selectedPage}

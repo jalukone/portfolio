@@ -12,7 +12,7 @@ const Landing = ({ setSelectedPage }: setSelectedPageProps) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
-    <section id="home" className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10
+    <section id="home" className="md:flex md:justify-between md:items-center h-full md:h-screen gap-16 py-10
       xl:mx-0 md:mx-[10%] ">
 
       {/* I M A G E */}
@@ -47,12 +47,16 @@ const Landing = ({ setSelectedPage }: setSelectedPageProps) => {
             visible: { opacity: 1, x: 0 }
           }}
         >
-          <h1 className="text-6xl font-dmmono text-green-accent z-10 text-center md:text-start">
+          <h1 className="text-6xl font-dmmono bg-gradient-greenblue bg-clip-text text-transparent 
+            z-10 text-center md:text-start"
+          >
             JalukOne
           </h1>
-          <p className="mt-10 mb-7 text-lg text-center md:text-start text-light px-[5%] ss:px-[10%] sm:px-[15%] md:px-0">
+          <p className="mt-10 mb-7 text-lg font-dmmono text-center md:text-start text-light 
+            px-[5%] ss:px-[10%] sm:px-[15%] md:px-0"
+          >
             Hello, I'm Gerson Jean Pierre and love Lorem ipsum dolor sit amet,
-            officia excepteur ex fugiat reprehenderit enim labore culpa sint ad
+            officia excepteur ex fugiat
           </p>
         </motion.div>
 
