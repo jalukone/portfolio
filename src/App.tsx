@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import DotGroup from "./components/DotGroup";
 import Landing from "./components/Landing";
-import MySkills from "./components/MySkills";
+import AboutMe from "./components/AboutMe";
 import Navbar from "./components/Navbar";
 import useMediaQuery from "./hooks/useMediaQuery";
 
@@ -47,7 +47,12 @@ const App = () => {
         </motion.div>
       </div>
       {/* M Y  S K I L L S */}
-      <MySkills />
+      <div className={`h-0.5 w-full bg-gradient-one`} />
+      <motion.div
+        onViewportEnter={() => setSelectedPage("about me")}
+      >
+        <AboutMe />
+      </motion.div>
 
     </div>
   )

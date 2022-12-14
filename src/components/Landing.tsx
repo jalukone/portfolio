@@ -12,7 +12,7 @@ const Landing = ({ setSelectedPage }: setSelectedPageProps) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
-    <section id="home" className="md:flex md:justify-between md:items-center h-full md:h-screen gap-16 py-10
+    <section id="home" className="md:flex md:justify-between md:items-center h-full gap-16 py-10
       xl:mx-0 md:mx-[10%] ">
 
       {/* I M A G E */}
