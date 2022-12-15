@@ -21,7 +21,7 @@ const DotGroup = ({ selectedPage, setSelectedPage }: DotGroupProps) => {
         href="#skills"
         className={`${selectedPage === "about me" ? selectedStyles : "bg-dark-grey"
           } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("skills")}
+        onClick={() => setSelectedPage("about me")}
       ></a>
 
       <a

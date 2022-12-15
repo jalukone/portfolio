@@ -47,7 +47,7 @@ const App = () => {
         </motion.div>
       </div>
       {/* M Y  S K I L L S */}
-      <div className={`h-0.5 w-full bg-gradient-one`} />
+      {/* <div className={`h-0.5 w-full bg-gradient-one`} /> */}
       <motion.div
         onViewportEnter={() => setSelectedPage("about me")}
       >
