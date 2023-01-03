@@ -16,7 +16,7 @@ const App = () => {
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
-        setSelectedPage("home");
+        setSelectedPage("inicio");
       }
       if (window.scrollY !== 0) setIsTopOfPage(false);
     };
@@ -41,7 +41,7 @@ const App = () => {
           />
         )}
         <motion.div
-          onViewportEnter={() => setSelectedPage("home")}
+          onViewportEnter={() => setSelectedPage("inicio")}
         >
           <Landing setSelectedPage={setSelectedPage} />
         </motion.div>
@@ -49,7 +49,7 @@ const App = () => {
       {/* M Y  S K I L L S */}
       {/* <div className={`h-0.5 w-full bg-gradient-one`} /> */}
       <motion.div
-        onViewportEnter={() => setSelectedPage("about me")}
+        onViewportEnter={() => setSelectedPage("sobre mi")}
       >
         <AboutMe />
       </motion.div>
