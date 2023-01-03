@@ -12,14 +12,14 @@ const Landing = ({ setSelectedPage }: setSelectedPageProps) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
-    <section id="home" className="md:flex md:justify-between md:items-center h-full gap-16 py-10
+    <section id="inicio" className="md:flex md:justify-between md:items-center h-full gap-16 py-10
       xl:mx-0 md:mx-[10%] ">
 
       {/* I M A G E */}
       <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
         {isAboveMediumScreens ? (
           <div className="relative z-0 ml-20 before:absolute before:-top-12 before:-left-12
-           before:rounded-full before:w-full before:h-full before:border-2 before:border-gold before:z-[-1]"
+            before:rounded-full before:w-full before:h-full before:border-2 before:border-gold before:z-[-1]"
           >
             <img
               className="rounded-full w-[400px] md:max-w-[600px] z-10 "

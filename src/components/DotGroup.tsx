@@ -11,24 +11,24 @@ const DotGroup = ({ selectedPage, setSelectedPage }: DotGroupProps) => {
   return (
     <div className="flex flex-col gap-6 fixed top-[60%] right-7">
       <a
-        href="#home"
-        className={`${selectedPage === "home" ? selectedStyles : "bg-dark-grey"
+        href="#inicio"
+        className={`${selectedPage === "inicio" ? selectedStyles : "bg-dark-grey"
           } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("home")}
+        onClick={() => setSelectedPage("inicio")}
       ></a>
 
       <a
-        href="#skills"
-        className={`${selectedPage === "about me" ? selectedStyles : "bg-dark-grey"
+        href="#sobre mi"
+        className={`${selectedPage === "sobre mi" ? selectedStyles : "bg-dark-grey"
           } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("about me")}
+        onClick={() => setSelectedPage("sobre mi")}
       ></a>
 
       <a
-        href="#projects"
-        className={`${selectedPage === "projects" ? selectedStyles : "bg-dark-grey"
+        href="#proyectos"
+        className={`${selectedPage === "proyectos" ? selectedStyles : "bg-dark-grey"
           } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("projects")}
+        onClick={() => setSelectedPage("proyectos")}
       ></a>
 
       {/* <a */}
@@ -39,10 +39,10 @@ const DotGroup = ({ selectedPage, setSelectedPage }: DotGroupProps) => {
       {/* ></a> */}
 
       <a
-        href="#contact"
-        className={`${selectedPage === "contact" ? selectedStyles : "bg-dark-grey"
+        href="#contactame"
+        className={`${selectedPage === "contactame" ? selectedStyles : "bg-dark-grey"
           } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("contact")}
+        onClick={() => setSelectedPage("contactame")}
       ></a>
     </div>
   );
