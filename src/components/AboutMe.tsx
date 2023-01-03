@@ -1,26 +1,37 @@
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
+import { languages, frameworks, design, tools } from "../utils/icons-tech"
 
 
 const AboutMe = () => {
   const isAboveMediumScreen = useMediaQuery("(min-width: 1099px)")
   return (
-    <section id="about me" className="pt-10 pb-20 mt-16 h-full md:h-[800px]">
+    <section id="sobre mi" className="pt-10 pb-20 mt-16 h-full ">
       <div className="grid grid-cols-12 grid-row-4 gap-4 ">
-        <div className="col-start-2 col-end-6 row-start-1 row-end-2">
+        <div className="col-start-2 col-end-7 row-start-1 row-end-2">
           <h2 className="font-dmmono text-5xl bg-gradient-greenblue bg-clip-text font-bold text-transparent">
-            About Me
+            Sobre Mi
           </h2>
         </div>
-        <div className="col-start-2 col-end-6 row-start-2 row-end-3">
-          <p className="text-light font-dmmono">
-            Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad
-            st culpa et culpa duis.
+        <div className="col-start-2 col-end-7 row-start-2 row-end-3">
+          <p className="text-light font-dmmono text-xl">
+            Desde que comencé a programar, supe que era una pasión que quería seguir cultivando.
+            La resolución de problemas, la capacidad de aprendizaje rápido y la constante atención a las últimas tecnologías son algunas de las habilidades que he desarrollado gracias a mi pasión por la programación.
           </p>
+          <br></br>
+          <p className="text-light font-dmmono text-xl">
+            Actualmente busco una oportunidad para desempeñarme profesionalmente y poner en práctica mis habilidades.
+          </p>
+          <br></br>
+          <p className="text-light font-dmmono text-xl">Estas son algunas tecnologías con las que he estado trabajando últimamente:</p>
         </div>
-        <div className="mt-20 col-start-2 col-end-12 row-start-3 row-end-5 flex justify-between items-center">
+
+
+
+        {/* S K I L L S */}
+        <div className="mt-20 col-start-2 col-end-12 row-start-3 row-end-5 md:flex flex-wrap md:justify-between gap-16 xl:gap-32">
           <motion.div
-            className="md:w-1/3 mt-10"
+            className="basis-1/4 mt-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -34,24 +45,127 @@ const AboutMe = () => {
               <div className="z-10">
                 <p className="font-dmmono text-light font-semibold text-5xl">01</p>
                 <p className="font-dmmono text-light font-semibold text-3xl mt-3">
-                  Experience
+                  Lenguajes
+                </p>
+              </div>
+              <div className="w-1/2 md:w-3/4 h-32 rounded-md bg-gradient-one absolute right-0 top-0 z-[-1]" />
+            </div>
+            <p className="mt-5 font-dmmono text-light">
+              Lenguajes de programacion, de marcado, de diseño y de dominio específico.
+            </p>
+            <div className="flex justify-between mt-5">
+              {languages.map(({ id, path }) =>
+                <img
+                  className="h-[40px]"
+                  key={id}
+                  src={path}
+                />
+              )}
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="basis-1/4 mt-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="relative h-32">
+              <div className="z-10">
+                <p className="font-dmmono text-light font-semibold text-5xl">02</p>
+                <p className="font-dmmono text-light font-semibold text-3xl mt-3">
+                  Frameworks
                 </p>
               </div>
               <div className="w-1/2 md:w-3/4 h-32 rounded-md bg-gradient-greenblue absolute right-0 top-0 z-[-1]" />
             </div>
             <p className="mt-5 font-dmmono text-light">
-              A auctor pharetra hendrerit mattis amet etiam interdum platea. Est
-              morbi porttitor scelerisque fermentum, sagittis non egestas. Amet
-              odio sit sagittis,
+              Librerías y Frameworks.
             </p>
+            <div className="flex justify-between mt-5">
+              {frameworks.map(({ id, path }) =>
+                <img
+                  className="h-[40px]"
+                  key={id}
+                  src={path}
+                />
+              )}
+            </div>
           </motion.div>
 
-          <div className="bg-gradient-one w-[400px] h-[200px]">
+          <motion.div
+            className="basis-1/4 mt-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="relative h-32">
+              <div className="z-10">
+                <p className="font-dmmono text-light font-semibold text-5xl">03</p>
+                <p className="font-dmmono text-light font-semibold text-3xl mt-3">
+                  Herramientas
+                </p>
+              </div>
+              <div className="w-1/2 md:w-3/4 h-32 rounded-md bg-gradient-one absolute right-0 top-0 z-[-1]" />
+            </div>
+            <p className="mt-5 font-dmmono text-light">
+              Herramientas y Plataformas.
+            </p>
+            <div className="flex gap-5 justify-between mt-5">
+              {tools.map(({ id, path }) =>
+                <img
+                  className="h-[40px]"
+                  key={id}
+                  src={path}
+                />
+              )}
+            </div>
+          </motion.div>
 
-          </div>
-          <div className="bg-gradient-one w-[400px] h-[200px]">
+          <motion.div
+            className="basis-1/4 mt-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="relative h-32">
+              <div className="z-10">
+                <p className="font-dmmono text-light font-semibold text-5xl">04</p>
+                <p className="font-dmmono text-light font-semibold text-3xl mt-3">
+                  Design
+                </p>
+              </div>
+              <div className="w-1/2 md:w-3/4 h-32 rounded-md bg-gradient-one absolute right-0 top-0 z-[-1]" />
+            </div>
+            <p className="mt-5 font-dmmono text-light">
+              Manejo de apps de diseño para desarrolladores.
+            </p>
+            <div className="flex justify-between mt-5">
+              {design.map(({ id, path }) =>
+                <img
+                  className="h-[40px]"
+                  key={id}
+                  src={path}
+                />
+              )}
+            </div>
+          </motion.div>
 
-          </div>
         </div>
       </div>
 
