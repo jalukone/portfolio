@@ -6,8 +6,8 @@ const SocialMediaIcons = () => {
 
   const socialMedias = [
     { id: "github", path: Github, url: "https://github.com/jalukone" },
-    { id: "github", path: Linkedin, url: "https://www.linkedin.com/in/gersonjeanpierre/" },
-    { id: "github", path: Instagram, url: "https://www.instagram.com/jalukone/" },
+    { id: "linkedin", path: Linkedin, url: "https://www.linkedin.com/in/gersonjeanpierre/" },
+    { id: "instagram", path: Instagram, url: "https://www.instagram.com/jalukone/" },
   ]
 
   return (
