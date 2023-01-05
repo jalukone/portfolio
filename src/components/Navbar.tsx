@@ -65,11 +65,15 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: NavbarProps) => 
           <div className="fixed right-0 bottom-0 h-full bg-dark w-[300px]">
             {/* C L O S E */}
             <div className="flex justify-end p-12">
-              <button onClick={() => setIsMenuToggled(!isMenuToggled)}> X </button>
+              <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" viewBox="0 0 24 24" stroke="#fff" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
 
             {/* M E N U   I T E M S */}
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-light">
+            <div className="flex flex-col gap-10 ml-[33%] text-xl text-light font-dmmono">
               <LinkAnchor
                 page="Inicio"
                 selectedPage={selectedPage}
