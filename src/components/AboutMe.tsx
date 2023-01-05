@@ -6,7 +6,7 @@ import ImgAbout from "../assets/img-about.jpg"
 const AboutMe = () => {
   const isAboveMediumScreen = useMediaQuery("(min-width: 1099px)")
   return (
-    <section id="sobre mi" className="pt-32 pb-20">
+    <section id="sobre mi" className="pt-32 pb-20 mt-2">
       <div className="grid grid-cols-12 auto-rows-auto gap-4 ">
         <motion.div
           className="col-start-2 col-end-12 lg:col-start-2 lg:col-end-7 row-start-1 row-end-2"
