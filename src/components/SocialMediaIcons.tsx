@@ -2,13 +2,13 @@ import Github from "../assets/github.svg"
 import Linkedin from "../assets/linkedin.svg"
 import Instagram from "../assets/instagram.svg"
 
+const socialMedias = [
+  { id: "github", path: Github, url: "https://github.com/jalukone" },
+  { id: "linkedin", path: Linkedin, url: "https://www.linkedin.com/in/gersonjeanpierre/" },
+  { id: "instagram", path: Instagram, url: "https://www.instagram.com/jalukone/" },
+]
 const SocialMediaIcons = () => {
 
-  const socialMedias = [
-    { id: "github", path: Github, url: "https://github.com/jalukone" },
-    { id: "linkedin", path: Linkedin, url: "https://www.linkedin.com/in/gersonjeanpierre/" },
-    { id: "instagram", path: Instagram, url: "https://www.instagram.com/jalukone/" },
-  ]
 
   return (
     <div className="flex justify-center md:justify-start my-8 gap-7">

@@ -5,10 +5,11 @@ import Landing from "./components/Landing";
 import AboutMe from "./components/AboutMe";
 import Navbar from "./components/Navbar";
 import useMediaQuery from "./hooks/useMediaQuery";
+import Projects from "./components/Projects";
 
 const App = () => {
 
-  const [selectedPage, setSelectedPage] = useState("home");
+  const [selectedPage, setSelectedPage] = useState("inicio");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 1060px)");
 
@@ -54,6 +55,14 @@ const App = () => {
       >
         <AboutMe />
       </motion.div>
+
+      {/* P R O J E C T S */}
+      <motion.div
+        onViewportEnter={() => setSelectedPage("proyectos")}
+      >
+        <Projects />
+      </motion.div>
+
 
     </div>
   )
