@@ -6,6 +6,8 @@ import AboutMe from "./components/AboutMe";
 import Navbar from "./components/Navbar";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
 
@@ -63,7 +65,14 @@ const App = () => {
         <Projects />
       </motion.div>
 
+      {/* C O  N T A C T */}
+      <motion.div
+        onViewportEnter={() => setSelectedPage("contactame")}
+      >
+        <Contact />
+      </motion.div>
 
+      <Footer />
     </div>
   )
 }
