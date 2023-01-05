@@ -9,11 +9,10 @@ type setSelectedPageProps = {
 
 const Landing = ({ setSelectedPage }: setSelectedPageProps) => {
 
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1099px)");
 
   return (
-    <section id="inicio" className="md:flex md:justify-between md:items-center h-full gap-16 py-10
-      xl:mx-0 md:mx-[10%] ">
+    <section id="inicio" className="flex md:flex-row flex-col justify-center md:justify-between md:items-center h-auto md:h-screen gap-16 py-10 xl:mx-0 md:mx-[10%] ">
 
       {/* I M A G E */}
       <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
@@ -29,7 +28,7 @@ const Landing = ({ setSelectedPage }: setSelectedPageProps) => {
           </div>
         ) : (
           <img
-            className="rounded-full w-full max-w-[400px]  mm:max-w-[450px] z-10 "
+            className="rounded-full w-[360px] xs:w-[450px] z-10 "
             alt="profile"
             src={Jaluk}
           />
