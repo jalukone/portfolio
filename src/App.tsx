@@ -32,8 +32,9 @@ const App = () => {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
+
       {/* L A N D I N G */}
-      <div className="md:grid place-items-center w-full h-full">
+      <div className="md:flex justify-center">
         {isDesktop && (
           <DotGroup
             selectedPage={selectedPage}
@@ -46,8 +47,8 @@ const App = () => {
           <Landing setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
+
       {/* M Y  S K I L L S */}
-      {/* <div className={`h-0.5 w-full bg-gradient-one`} /> */}
       <motion.div
         onViewportEnter={() => setSelectedPage("sobre mi")}
       >
