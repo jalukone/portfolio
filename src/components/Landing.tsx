@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 import Jaluk from "../assets/profile.png"
 import SocialMediaIcons from "./SocialMediaIcons";
 
-type setSelectedPageProps = {
+type LandingProps = {
   setSelectedPage: Function
 }
 
-const Landing = ({ setSelectedPage }: setSelectedPageProps) => {
+const Landing = ({ setSelectedPage }: LandingProps) => {
 
   const isAboveMediumScreens = useMediaQuery("(min-width: 1099px)");
 
   return (
-    <section id="inicio" className="flex md:flex-row flex-col justify-center md:justify-between md:items-center h-auto md:h-screen gap-16 py-10 xl:mx-0 md:mx-[10%] ">
+    <section id="inicio" className="font-dmmono flex md:flex-row flex-col justify-center md:justify-between md:items-center h-auto md:h-screen gap-16 py-10 xl:mx-0 md:mx-[10%] ">
 
       {/* I M A G E */}
       <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
@@ -46,12 +46,12 @@ const Landing = ({ setSelectedPage }: setSelectedPageProps) => {
             visible: { opacity: 1, x: 0 }
           }}
         >
-          <h1 className="text-6xl font-dmmono bg-gradient-greenblue bg-clip-text text-transparent 
+          <h1 className="text-6xl bg-gradient-greenblue bg-clip-text text-transparent 
             z-10 text-center md:text-start"
           >
             JalukOne
           </h1>
-          <p className="mt-10 mb-7 text-lg font-dmmono text-center md:text-start text-light 
+          <p className="mt-10 mb-7 text-lg text-center md:text-start text-light 
             px-[5%] ss:px-[10%] sm:px-[15%] md:px-0"
           >
             Hello, I'm Gerson Jean Pierre and love Lorem ipsum dolor sit amet,
@@ -72,7 +72,7 @@ const Landing = ({ setSelectedPage }: setSelectedPageProps) => {
           }}
         >
           <a
-            className="bg-gradient-one font-dmmono text-dark rounded-tl-xl rounded-bl-xl py-3 px-7 font-semibold z-10 cursor-pointer"
+            className="bg-gradient-one text-dark rounded-tl-xl rounded-bl-xl py-3 px-7 font-semibold z-10 cursor-pointer"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
@@ -84,8 +84,7 @@ const Landing = ({ setSelectedPage }: setSelectedPageProps) => {
             href="#contact"
           >
             <span
-              className="bg-dark text-light w-full h-full rounded-tr-xl rounded-br-xl rounded-tl-none rounded-bl-none
-                flex items-center justify-center px-8 font-dmmono"
+              className="bg-dark text-light w-full h-full rounded-tr-xl rounded-br-xl rounded-tl-none rounded-bl-none flex items-center justify-center px-8"
             >Let's talk</span>
           </a>
         </motion.div>

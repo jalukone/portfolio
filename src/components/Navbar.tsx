@@ -18,7 +18,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: NavbarProps) => 
 
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${navbarBackground} font-dmmono z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <a
           href="#inicio"
@@ -27,7 +27,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: NavbarProps) => 
         </a>
         {/* D E S K T O P */}
         {isAboveSmallScreens ? (
-          <div className="flex justify-between gap-16 font-dmmono text-lg ">
+          <div className="flex justify-between gap-16 text-xl ">
             <LinkAnchor
               page="Inicio"
               selectedPage={selectedPage}
@@ -73,7 +73,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: NavbarProps) => 
             </div>
 
             {/* M E N U   I T E M S */}
-            <div className="flex flex-col gap-10 ml-[33%] text-xl text-light font-dmmono">
+            <div className="flex flex-col gap-10 ml-[33%] text-lg text-light">
               <LinkAnchor
                 page="Inicio"
                 selectedPage={selectedPage}

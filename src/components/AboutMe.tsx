@@ -1,10 +1,9 @@
-import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import { languages, frameworks, design, tools } from "../utils/icons-tech"
 import ImgAbout from "../assets/img-about.jpg"
 
 const AboutMe = () => {
-  const isAboveMediumScreen = useMediaQuery("(min-width: 1099px)")
+
   return (
     <section id="sobre mi" className="pt-32 pb-20 mt-2">
       <div className="grid grid-cols-12 auto-rows-auto gap-4 ">
@@ -20,7 +19,9 @@ const AboutMe = () => {
           }}
         >
           <h2 className="font-dmmono text-5xl bg-gradient-greenblue bg-clip-text font-bold text-transparent">
-            Sobre Mi
+            <span className="bg-gradient-greenblue bg-[length:100%_2px] bg-no-repeat bg-bottom">
+              Sobre Mi
+            </span>
           </h2>
         </motion.div>
 
