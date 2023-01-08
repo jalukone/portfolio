@@ -54,8 +54,8 @@ const Landing = ({ setSelectedPage }: LandingProps) => {
           <p className="mt-10 mb-7 text-lg text-center md:text-start text-light 
             px-[5%] ss:px-[10%] sm:px-[15%] md:px-0"
           >
-            Hello, I'm Gerson Jean Pierre and love Lorem ipsum dolor sit amet,
-            officia excepteur ex fugiat
+            Hola 👋, me llamo Gerson Jean Pierre. Me encanta la programación y aprender
+            constantemente.👨‍💻🚀
           </p>
         </motion.div>
 
@@ -76,7 +76,7 @@ const Landing = ({ setSelectedPage }: LandingProps) => {
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            Contact Me
+            Contactame
           </a>
           <a
             className="rounded-tr-xl rounded-br-xl rounded-tl-none rounded-bl-none bg-gradient-one py-0.5 pr-0.5"
@@ -85,7 +85,7 @@ const Landing = ({ setSelectedPage }: LandingProps) => {
           >
             <span
               className="bg-dark text-light w-full h-full rounded-tr-xl rounded-br-xl rounded-tl-none rounded-bl-none flex items-center justify-center px-8"
-            >Let's talk</span>
+            >Empecemos</span>
           </a>
         </motion.div>
         <motion.div

@@ -77,7 +77,7 @@ const Projects = () => {
             <div
               className="flex justify-center text-center items-center p-10 bg-gradient-one text-2xl font-playfair font-semibold"
             >
-              BEAUTIFUL USER INTERFACES
+              Mejorando UI
             </div>
             <Project title="Proyecto 1" image={Project1} description="hola este es mi proyecto de portafolio" />
             <Project title="Proyecto 1" image={Project1} description="hola este es mi proyecto de portafolio" />
@@ -101,7 +101,7 @@ const Projects = () => {
             <div className="bg-gradient-greenblue"></div> */}
             <div className="flex justify-center text-center items-center p-10 bg-gradient-greenblue text-2xl font-playfair font-semibold"
             >
-              SMOOTH USER EXPERIENCE
+              Usando las mejores tecnologias
             </div>
           </motion.div>
         </div>

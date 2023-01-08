@@ -57,7 +57,7 @@ const Contact = () => {
               </h3>
 
               <p className="mt-3 text-center text-gray-600 dark:text-gray-400">
-                Mande un e-mail para responderle
+                Escribame un e-mail
               </p>
 
               <div className="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 md:grid-cols-3">
@@ -74,7 +74,7 @@ const Contact = () => {
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
 
-                  <span className="mt-2">+51910979998</span>
+                  <span className="mt-2">+51 959733651</span>
                 </a>
 
                 <a href="#" className="flex flex-col items-center px-4 py-3 text-gray-700 transition-colors duration-300 transform rounded-md dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-500">
